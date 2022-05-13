@@ -1,0 +1,371 @@
+/* CSS - Part one  */
+
+
+/* Aloha, Hola, Howdy, I am Charlean and will be showing you how to spice up your webpage.
+  So now that you have the structure from
+  + hypertext markup language HTML
+  and the behavior setup by
+  + javascript JS
+  We can start thinking about how we want to present our content to the world using
+  + CSS
+  What is CSS?
+Cascading Style Sheets
+CSS (Cascading Style Sheets) is a styling language that describes how elements should be rendered in the browser, the dressup of coding languages
+The CSS code is for describing how content is presented (e.g. colors, fonts, font-sizing, shapes).
+if a question---The current version of CSS we'll be using is CSS3
+if a question---CSS3 improvements involve responsive-support or mobile-friendly support.
+
+**Yes Screen Share**
+
+Creating a CSS file
+Just like we did with the other files we've made we are going to create a file in the project with an appropriate extension called styles.css
+The extension .css denotes that this page utilizes the css language and only that language.
+Each language has its own unique syntax. Today I will show you the different ways to use CSS to give personality to your web page.
+
+First let's link a CSS file
+In order to link a css file we are going to create a link tag in the Head of our HTML file. 
+
+------Go to Line under favicon
+<head>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+The <link> tag defines the relationship between the current document and an external resource. This link tag will have two attributes. Attributes are shorthand info about the html element.
+Type rel and href, think of these are keywords 
+rel - The rel attribute defines the relationship between a linked resource and the current document.
+href - For <link> elements, the hypertext reference attribute specifies the location (URL) of the external resource (most often a style sheet file)
+
+ */
+
+/* As you have seen with the languages you learn so forth like html (go to the index.html) and js (go to the js file) there are rules to its syntax structure.
+
+The CSS Rule
+object {
+  key: value;
+}
+///type that rule commented out in css */
+
+/* 
+The CSS rule starts with an object - the item I want to change.
+It has sets of key/value pairs- They are a declaration of what I want to see happen to that particular portion of the selected object. (selector)
+key --- what about the object I want to change (body, font, a header, a paragraph) You can also think of the key as unlocking a certain attribute that controls the way something is displayed
+
+value --- how I want to modify that key (change the background to purple the body, use a certain style of text, a bold header, a paragraph with a border).
+
+Declarations end with a semicolon
+Declaration groups are surrounded by curly brackets.
+object {
+  key: value;
+  key: value;
+  key: value;
+}
+
+There are many ways to apply these css rules.
+1st method --- html tag
+Let's change the display of our body, h1, h2 text 
+*/
+
+/* If you want to change the color of the body. Use the key background-color. and type the value antiquewhite.  */
+* {
+  text-align: center;
+}
+
+/* If you want to change the text/font, use the key “color” and set the value (what I want it changed to)
+ To give more detail to the actual color value we can numeric values like rgb (red, green and blue )or hex (hexadecimal numbers)  
+ If questioned --->just a Combination of Science, Math, and Wonder to tell the computer what to display. 
+ Use google color picker for rgb, hex */
+h1 {
+  color: rgb(34, 137, 34);
+  text-align: center;
+}
+
+/* I want to underline my text with the same color used on my h1. I can't quite remember the syntax. We can search ideas in our buddy call google. state the language what you are searching. css underline text w3schools go to show demo */
+h2 {
+  text-decoration: underline #08b408;
+}
+
+h3 {
+  text-decoration: underline #08b408;
+}
+
+/* I think I want all my headers to look like that, proceed with copy and paste then talk about DRY (Don't Repeat Yourself) then change to h2, h3 {} explaining that two objects can share the same declaration*
+
+/* Attribute Assignment 
+	
+We can also come up with custom css objects and assign them to HTML elements 
+When we want to create a unique object that can be reused several times we want to create a class attribute on our html file and then reflect the styling of that attribute on our css file. 
+class = “box”  <—--->   .box{} 
+Let's do this. We start with the opening tag of the object we want to change. We make a custom class attribute with the following syntax. The keyword class and assigning a name. box
+To connect this class attribute from HTML to css we call on the same name the class was set to and use the “.” to denote this is a class attribute. When speaking the language html, we use class to say here's a unique class attribute I made. When speaking the language css, we use "." to say here's a unique class attribute I made.*/
+
+/* If you want to make box or border key border. Search different types of border properties */
+.box {
+  border-width: 4px;
+  border-style: outset;
+  border-color: #08b408;
+  border-radius: 4px;
+  /* shorthand Width Style Color on one line*/
+  /* border: 4px outset #08b408; */
+}
+/* Now I can pass this unique class object on other html tags. place on the next p tag. state that you want that same border around all of the ingredients. place on the ingredient title. Oh no, this is not the look. what I want is a border around everything. div it out ... when it doubt, div it out. the <div> html tag element does not inherently represent anything. Instead, it's used to group content so it can be easily styled, just marking off a section of a document. */
+
+/* When we want to create a unique object that be used once we want to use the “id” attribute to create a custom object.
+
+To connect an id from HTML to css we call on the same name as the id was set to and use the “#” to denote this custom object is attached to an id */
+#grid {
+  border: 4px inset #08b408;
+  width: auto;
+  margin: auto;
+}
+
+/* pseudo class hover */
+/* The syntax of pseudo-classes:
+
+selector:pseudo-class {
+  property: value;
+} */
+/* Select and style a link when you mouse over it: The :hover selector is used to select elements when you mouse over them.
+Tip: The :hover selector can be used on all elements, not only on links.*/
+
+/* unvisited link */
+a:link {
+  color: green;
+}
+
+/* visited link */
+a:visited {
+  color: blue;
+}
+
+/* mouse over link */
+a:hover {
+  background-color: darkolivegreen;
+}
+
+
+
+/* fixed the image */
+body {
+  background-color: antiquewhite;
+
+  /* using image as background */
+  background-image: url(images/map.png);
+  /* background-repeat: no-repeat; */
+  background-size: cover;
+  background-position: center;
+  /* height: 100%; */
+  /* The background-attachment CSS property sets whether a background image's position is fixed within the viewport, */
+  background-attachment: fixed;
+}
+
+/* Add background color to p and place more styling for readability
+background-color: rgb(255, 250, 205); */
+
+
+/* Since we are giving this app is best life <!-- Favicon
+A favicon is a small image that sits on the chrome tab.
+Back in the head tag we need to add a special tag called link
+Link takes three attributes
+rel="icon" 
+type="image/x-icon"
+href=""
+ -->
+<link rel="icon" type="image/x-icon" href="https://pixahive.com/wp-content/uploads/2021/04/Apple-illustration-413444-pixahive.jpg">
+
+<title>LEARN's Apple Treats</title> */
+
+
+/* whenever we discuss table border attribute in html
+The purpose of the HTML border attribute is to set a visible border width for a table. Syntax
+
+<table border="value" >.....</table> */
+/* Here's a link https://www.html.am/html-codes/tables/table-border.cfm */
+
+/* Google fonts */
+* {}
+/* Font
+https://fonts.google.com/
+Select the font
+Copy the html link
+Paste in the <head>
+Copy the css element */
+
+/* Animation */
+/* add div around the h1, h2
+<div class="easter bounce"> */
+/* easter egg animation https://css-tricks.com/making-css-animations-feel-natural/*/
+.easter {
+  /* align-self: flex-end; */
+  /* text-align: center; */
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  transform-origin: bottom;
+  /* width: 50%; */
+}
+.bounce {
+  animation-name: bounce;
+  animation-timing-function: ease;
+}
+/* The translate() method moves an element from its current position (according to the parameters given for the X-axis and the Y-axis). With the translateY function, positive values move the element down, negative values move the element up. The scale() method increases or decreases the size of an element (according to the parameters given for the width and height). 
+
+*/
+@keyframes bounce {
+  0%   { transform: scale(1,1)    translateY(0); }
+  10%  { transform: scale(1.1,.9) translateY(0); }
+  30%  { transform: scale(.9,1.1) translateY(-100px); }
+  50%  { transform: scale(1,1)    translateY(0); }
+  100% { transform: scale(1,1)    translateY(0); }
+}
+
+/* After flexbox froggy */
+body {
+  display: flex;
+  flex-flow: column wrap;
+  align-content: center;
+  text-align: center;
+}
+
+/* pseudo class hover over a column and change the color*/
+/* td:hover {
+  background-color: darkolivegreen;
+}  does one cell I want the whole column*/
+/* Does a whole column */
+/* table {
+  overflow: hidden;
+}
+td {
+  position: relative;
+}
+td:hover::after {
+  content: "";
+  position: absolute;
+  background-color: rgb(238, 143, 109);
+  left: 0;
+  top: -5000px;
+  height: 10000px;
+  width: 100%;
+  z-index: -1;
+} */
+
+body {
+  display: flex;
+  flex-flow: column wrap;
+  /* justify-content: center; */
+  align-content: center;
+  text-align: center;
+}
+
+/* ul li {
+  list-style: none;
+} */
+/* When looking at centering items on your webpage, you have to be aware of the space surrounding it. Objects can be centered by using the margin key if they are block elements and have a defined width. 
+
+    margin: 0 auto;
+    /* margin-top:0;
+    margin-right:auto;
+margin-bottom:0;
+margin-left:auto;
+ */
+
+ /* Padding is used to create space around an element's content, inside of any defined borders.
+
+ css box model w3 schools 
+ 
+ flex box froggy
+ #pond {
+  display: flex;
+  flex-wrap: wrap;
+flex-direction: column-reverse;
+align-content: center;
+}
+#pond {
+  display: flex;
+flex-direction: column-reverse;
+flex-wrap: wrap-reverse;
+align-content: space-between;
+justify-content: center;
+}
+
+ */
+
+
+
+
+
+body {
+  /* objects: properties */
+  /* AKA */
+  /* key: value */
+  /* background-color: #fff88f; */
+  background-image: url(https://live.staticflickr.com/65535/46895864674_df0d41ac61_b.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* h1 {
+  font-family: 'Baloo Tamma 2', cursive;
+  font-size: 80px;
+  font-weight: bold;
+  padding: 10px;
+  color: #cce0ff;
+  text-shadow: 2px 2px #000;
+  animation: shake 1s infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  text-align: center;
+} */
+
+p, h2, h3, div, footer {
+  background-color: rgb(255, 250, 205);
+  /* color: lightseagreen; */
+  /* text-align: center; */
+  font-family: 'Lemonada', cursive;
+/* add after flexbox froggy */
+  /* justify-content: center; */
+  width: 50%;
+}
+
+a:hover {
+  color: red;
+}
+
+#centered {
+  display: flex;
+  justify-content: center;
+}
+
+/* @keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+} */
+
+/* `Every CSS selector has its place in a hierarchy. The order the code is executed
+There are four categories which define the specificity level of a selector:
+Inline styles - Example: <h1 style="color: blue;">
+IDs - Example: #red
+Classes - pseudo-classes, attribute selectors - Example: .purple, :hover, [href]
+Elements and pseudo-elements - Example: html tags, :before
+Delete one at a time to show the hierarchy on a h1 tag using each specificity`
+
+I created all the things on one html tag. Then deleted one attribute at a time to visually show how the hierarchy works...because I need to hear and then see to learn.
+Since h1 is busy, I would place it on the h2
+<h2 class="purple" id="pink" style="color: blue;">
+h2 {color: red}
+.purple { color: purple;}
+#pink { color: pink;}
+
+
+
+/* The z-index property specifies the stack order of an element.
+
+An element with greater stack order is always in front of an element with a lower stack order. */

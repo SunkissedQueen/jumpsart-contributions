@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>LEARN's Apple Pie</title>
+
+<!-- Favicon
+A favicon is a small image that sits on the chrome tab.
+Back in the head tag we need to add a special tag called link
+Link takes three attributes
+rel="icon" 
+type="image/x-icon"
+href=""
+The href will link to an image address of something like an apple -->
+    <link rel="icon" type="image/x-icon" href="https://pixahive.com/wp-content/uploads/2021/04/Apple-illustration-413444-pixahive.jpg">
+
+<!-- ----Go to the button that leads to the recipe. Under the body. Will be below the h1 tag.     -->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&family=Lemonada:wght@300&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <h1 id="top">LEARN's Apple Pie</h1>
+    <h2> A spoonful or forkful will make your worries go bye!</h2>
+
+<!-- Button
+Lastly Let’s make a button on the top of the page to take our user to the recipe if they just want the information.
+First we’ll set up a div around the recipe and give it the id of recipe
+<div id=’recipe’></div> or assign id='recipe' to h3 tag on recipe near ingredient list
+Next we’ll create an anchor tag at the top of the page the will send us to the recipe
+And then inside that a tag we’ll create a button tag that will show the words take me to the recipe -->
+    <a href="#recipe">
+      <button>Take me to the recipe</button>
+    </a> 
+
+<!-- **no share screen**
+Okay let's break into our pairs again and finish up the section on HTML in the ‘Jumpstart Weekend Student Notes’ 
+We’ll come back together for checkout at 8:40pm -->
+    <hr>
+    <img src="https://media.istockphoto.com/photos/homemade-organic-apple-pie-dessert-picture-id450752471" height="300px">
+    <div>
+      <p> Go to your kitchen and grab your utensils. Let them know they are about to do something spectacular. Tell your tastebuds to get ready for a splendid occurence because you are about to bake some Learn Apple Pie!</p>
+      <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <span id="important">this information is VERY important</span> nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+    </div>
+
+    <h3>Ingredients</h3>
+    <ul>
+      <li>Large Granny Smith apples (1/2 inch slices)</li>
+      <li>Large Honeycrisp apples (1/2 inch slices)</li>
+      <li>Large Golden Delicious apples (1/2 inch slices)</li>
+      <li>Pie crusts</li>
+      <li>White sugar</li>
+      <li>Brown sugar</li>
+      <li>Tapioca</li>
+      <li>Cinnamon</li>
+      <li>Nutmeg</li>
+      <li>Lemon (zested and juiced)</li>
+      <li>Large Egg (lightly beaten for egg wash)</li>
+    </ul>
+    <h3 id="recipe">Recipe Instructions</h3>
+    <ol>
+      <li>Preheat oven to 400F</li>
+      <li>Prebake pie crust inside a deep dish pie pan</li>
+      <li>Mix all the ingredients except egg wash in a mixing bowl</li>
+      <li>Spoon the apple filling over the bottom crust and discard juices</li>
+      <li>Lay a pie crust over the apple filling</li>
+      <li>Trim the dough along the outside edge of the pie pan</li>
+      <li>Cut 4 slits in the top of the dough to allow steam to vent</li>
+      <li>Cover the edges with a strip of foil to keep from over browning</li>
+      <li>
+        Bake them!
+        <ul>
+          <li>400 degrees for 25 minutes</li>
+          <li>Remove aluminum foil</li>
+          <li>375 degrees for an additional 30 minutes or until the top is golden brown and the juices are bubbly</li>
+        </ul>
+      </li>
+      <li>Let them sit for a bit</li>
+    </ol>
+ <!-- A div is a  block level element -->
+    <div>
+
+<!-- Table
+Explore nesting HTML elements by creating a basic table.
+Table
+(say this after creating tables) And if we want to add some temporary style to our table we can use an attribute (inline styling) -->
+    <p>There are so many apple varieties to choose from when making apple pie. Here a few common varieties</p>
+      <table border=1>
+
+<!-- Table Row -->
+        <tr>
+
+<!-- Table Data <td>
+(2 rows of 2 table data, refresh browser and show 1X1, 2X2, 3X3, show one large block with other rows) -->
+          <td>Granny Smith</td>
+          <td>Honeycrisp</td>
+          <td>Jazz</td>
+          <td>Pink Lady</td>
+          <td>Golden Delicious</td>
+        </tr>
+        <tr>
+          <td>Super tart and very firm</td>
+          <td>Super crisp, tart, sweet</td>
+          <td>Crisp and sweet</td>
+          <td>Little tart and sweet</td>
+          <td>Little softer than the others</td>
+        </tr>
+      </table>
+    </div>
+
+<!-- ----Go to the area to make a favicon in the header -->
+
+<!-- HTML - Part two
+**yes screen share**
+Footer
+A footer is a standard section of any web page and generally hold some information regarding 
+the authors of the site
+where more information can be found
+possibly a link to some external resource
+To create a footer we simply make a tag with the word footer -->
+    <footer>
+
+<!-- In this tag I can put a copyright logo © with the names of my team -->
+      &copy LEARN Instructors and TAs | Jumpstart |
+
+<!-- What would make this footer even better would be a link to take me back to the top of the page
+Anchor Tags and Navigation
+So let's make a navigation link in footer to the top of the page so people don’t have to scroll all the way up. 
+The anchor tag is how we create those famous blue links in HTML
+The Anchor tag is simply an HTML tag made with the letter “a”
+The Anchor tag takes an attribute of href and then the place we want the link to go       -->
+      <a href="#top">Top of page</a>
+<!-- And we also need to add an id=’top’ to the first element in our <body> tag -->
+
+<!-- Link to external website
+An <a> tag with link to where I got the recipe from https://littlespoonfarm.com/apple-pie-recipe/ -->
+      <a href="https://littlespoonfarm.com/apple-pie-recipe/" target="_blank">Apple Pie Recipe</a>
+    </footer>
+
+<!-- --Go to the area where a table resides after the list of ingredients -->
+    <script type="text/javascript" src="logic.js"></script>
+  </body>
+</html>

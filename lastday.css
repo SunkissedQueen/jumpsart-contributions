@@ -1,0 +1,349 @@
+/* CSS - Part one  */
+
+/* 
+
+Aloha, Hola, Howdy, We will be spicing up your webpages.
+  So forth we structure from
+  + hypertext markup language HTML
+  and the behavior setup by
+  + javascript JS
+  We can start thinking about how we want to present our content to the world using
+  + CSS
+  What is CSS?
+Cascading Style Sheets
+CSS is a styling language that describes how elements should be rendered in the browser, the dressup of coding languages
+The CSS code describes how content is presented (e.g. colors, fonts, font-sizing, shapes).
+----if a question---The current version of CSS we'll be using is CSS3
+----if a question---CSS3 improvements involve responsive-support or mobile-friendly support.
+
+**Yes Screen Share**
+So Let's get started. When I share my screen, I can't see thumbs up nor chat. So what will you do for me? Shout it out. Thank you! If you have questions. What should you do?
+
+Another disclaimer...We want to ensure you get the concept and basic flow of things. There are so many shortcuts that are convenient...this is an introductory so we will show you the simplest way to navigate to information. Plus, we don't want to overload any beginners with too much info while learning these new techniques. Please feel free to share your shortcuts in the slack so everyone can have access to it later or share it at the end of this presentation. Deal? Again if there are questions on what I present...shout it.
+
+So the last time I was with you. I had this code. Let's see what you all did yesterday.
+----Update html and add js file, Click the Granny smith and etc
+
+Creating a CSS file
+Just like we did with the other files we've made we are going to create a file in the project called styles.css
+In atom -> in the project folder create a file named styles.css
+The extension .css denotes that this page utilizes the css language and only that language.
+ 
+Linking a CSS file
+In order to link a css file we are going to create a link tag in the Head of our HTML file. This link tag will have two attributes 
+rel - The rel attribute defines the relationship between a linked resource and the current document.
+href - For <link> elements, the href attribute specifies the location (URL) of the external resource (most often a style sheet file)
+
+------Go to Line under favicon
+<head>
+  <link rel="stylesheet" href="styles.css">
+</head> */
+
+/* As you have seen with the html and js languages there are different rules for each language.
+
+The CSS Rule
+selector {
+  property: value;
+}
+///type that rule commented out in css */
+
+/* A block of CSS code is a rule.
+This rule starts with a selector - the object I want to change.
+It has sets of properties-what about the selector we want to change and values-what about that selector that we want to change.
+A property-value pair is a declaration.
+Declarations end with a semicolon
+Declaration groups are surrounded by curly brackets.
+selector {
+  property: value;
+  property: value;
+  property: value;
+}
+
+Some text editors might not have the shortcuts so we will do things univerally. Color values can be found in many spaces. We will be using a handy tool on Google---go to color picker in google pick a green */
+
+
+/* How do we apply the css code to our webpage? Great question
+We have html tag selectors, assigning class attributes to html tag, and assigning id attributes to html tag 
+
+Let's start with html tags
+
+We’re already familiar with how the h1 looks <h1,2,3,4> ->  h1,2,3,4{}
+---Point out the tags and point out how different each tag looks on the webpage
+What if we updated it a bit and changed its color? That's a good question */
+h1 {
+  color:rgb(20, 82, 51);
+}
+
+h2 {
+  color:rgb(20, 82, 51);  
+}
+
+h3 {
+  color:rgb(20, 82, 51);
+}
+/* Make changes for the other h’s if you are displaying them. Then show how to consolidate repetitive declarations..because we work in the DRY principle Don't Repeat Yourself  
+h1, h2, h3 */
+
+/* We can change other font properties like centering, pass on the h tags 
+
+  text-align: center;  
+
+making it bold (since h1 makes everything bold already let's do the line items. */
+* {
+  font-family: 'Allerta Stencil', sans-serif;
+}
+
+li {
+  font-weight: bold;  
+}
+
+/* <body> -> body{}
+Let's talk about this html tag the body tag targets everything that displays to our user on the web page. So if I change the background color it should appear everywhere. */
+body {
+  background-color: #bda579;
+}
+
+/* so background color not only works for the body but also for a section of the webpage for instance the footer */
+footer {
+  background-color: rgb(20, 82, 51);
+  color: #bda579;
+  padding: 10px;  
+}
+
+/* <p> -> p{} */
+p {
+  background-color: rgba(255, 250, 205, 0.7);
+  text-align: center;
+}
+
+/* Attribute Assignment Class*/
+/* We can also come up with custom css selectors and assign them to HTML elements as we like. The class and id attributes are ways for developers to talk to each other through code. 
+ 
+When we want to create a unique selector that shows we have used it several times in our code we create a class */
+/* Let's assign a class to our recipe. like the h3 tag.
+/* <h3 class="larger> recipe .larger{}  */
+/* To connect a class from HTML to css we call on the same name the class was set to and use the “.” to denote this is a class item */
+.larger {
+  font-size: 25px;
+}
+
+/* When we want to show a unique selector that we only used once in our code, we use the “id” selector just like we did internally for the top of page and recipe ids. Show on index.html.
+<li id = “green” <-----> #green{}
+<li id = “white” <-----> #white{}
+<li id = “red” <-----> #red{}
+To connect an id from HTML to css we call on the same name as the id was set to and use the “#” to denote this selector is attached to an id */
+
+/* target an id using # */
+#green {
+  color: rgb(21, 110, 45);
+  font-style: italic;
+}
+
+#white {
+  color: rgb(245, 245, 245);
+  background-color: burlywood;
+}
+
+#red {
+  color: rgb(120, 19, 10);
+  text-decoration-line: overline;
+}
+
+/* Looking at this display. Let's add that larger class to all the ingredients. Type class="larger" a couple of times. Because there are so much included in this recipe I will use a nifty html tag <div> recipe <div/>  */
+/* the <div> element does not inherently represent anything. Instead, it's used to group content so it can be easily styled using this class selector, just marking off a section of a document. */
+/* Let's assign that class="larger" attribute on the div html tag */
+
+/* Around the button */
+.get-recipe {
+  text-align: center;
+}
+
+/* #ingredients {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-content: center;
+} */
+
+/* Now Let's change the style of the font..back to our favorite friend Google */
+/* Font
+https://fonts.google.com/
+Select the font Baloo, Lemonada, Allerta
+Copy the html link
+Paste in the <head>
+Copy the css element into the different html tags  */
+/* {
+font-family: 'Allerta Stencil', sans-serif;
+font-family: 'Baloo 2', cursive;
+font-family: 'Lemonada', cursive; */
+
+/* for reference only #centered {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+} */
+
+
+/* Borders:*/ 		
+table {
+  border-radius: 5px;
+  padding: 5px;
+  border-width: 3px;
+  border-style: dotted;
+  border-color: rgb(21, 110, 45);
+  /* Width Style Color */
+  /* border: 3px dotted rgb(21, 110, 45); */
+}
+
+p {
+  border-radius: 5px;
+  border-left: 5px solid rgb(21, 110, 45);
+}
+
+
+/* Also talk about changing the color of the h2 tag back to black
+h2 {
+  color: red;
+}
+What happened here?
+
+Every CSS selector has its place in a hierarchy. The order the code is executed
+
+There are four categories which define the specificity level of a selector:
+
+Inline styles - Example: <h1 style="color: blue;">
+IDs - Example: #red
+Classes - Example: .centered
+html tag - Example: h1 
+Delete one at a time to show the hierarchy */
+
+/* Create all the things on one html tag. Then delete one attribute at a time to visually show how the hierarchy works...because I need to hear and then see to learn.
+
+Place it on the h2 in index.html
+<h2 class="pink" id="purple" style="color: blue;">
+
+Place it in the css file
+h2 {
+  color: red;
+}
+
+#purple { 
+  color: purple;
+}
+
+.pink { 
+  color: pink;
+} */
+
+/*  for reference 
+center the button
+button, table {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+} 
+*/
+/* spread the image
+body { 
+   background-image: url(https://images.unsplash.com/photo-1474045326708-cdc78c2487cb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+} */
+
+/*  extra notes h1 {
+  font-family: 'Baloo Tamma 2', cursive;
+  font-size: 80px;
+  font-weight: bold;
+  padding: 10px;
+  color: #cce0ff;
+  text-shadow: 2px 2px #000;
+  text-align: center;
+} */
+
+/* extra notes p {
+  background-color: rgb(255, 250, 205);
+  color: lightseagreen;
+  border: 1px dotted rosybrown;
+  border-radius: 25px;
+  text-align: center;
+  font-family: 'Lemonada', cursive;
+  font-size: 20px;
+} */
+
+
+
+CSS
+
+
+Screen Share?
+Linking a css file
+<head>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+Css objects
+Object Name {}
+Key: value pairs
+Target the key (what I want to change) :
+set the value (what I want it changed too)
+color: blue
+
+
+
+Tag selector - redefining the entire HTML tag
+We are already familiar with the HTML Tags, but what if we could change how they looked 
+<div>  -> div{} 
+<h1,2,3,4> ->  h1,2,3,4{}
+<p> -> p{}
+<body> -> body{}
+
+Attribute Assignment 
+class = “name”
+.name{}
+id = “name”
+#name{}
+
+Font
+https://fonts.google.com/
+Select the font
+Copy the html link
+Copy the css element
+
+Borders:
+Radius
+Width
+Style
+Color
+
+
+Width Style Color
+
+
+--------------------- pause --------------------
+
+Background image: url()
+
+Pseudo selectors
+button:hover {
+  color: blue;
+}
+
+Animations
+@keyframes
+	
+“Centering things is difficult”
+
+FLEX BOX
+
+
+Flexbox froggy
+Display : flex
+Justify content : ____
+text-align: center
+align-items: center
+
+Extra Info
+LOL code
+Flexbox froggy
